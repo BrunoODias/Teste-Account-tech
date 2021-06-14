@@ -1,0 +1,52 @@
+.button-number{
+    text-align: center;
+    width: 4rem;
+    height: 3rem;
+    font-size: 2rem;
+    background: #131414;
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    border-left: #000101 0.2rem solid;
+    border-bottom: #000101 0.2rem solid;
+}
+
+.candidate-attribute {
+    width: fit-content;
+    max-width: 21rem;
+    text-overflow: ellipsis;
+    height: 2rem;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.button-number:active,.button-text:active {
+    border: none;
+    border-right: #000101 0.2rem solid;
+    border-top: #000101 0.2rem solid;
+}
+.button-text {
+    width: 7rem;
+    text-align: center;
+    height: 3rem;
+    border: none;
+    border-radius: 0.25rem;
+    border-left: #000101 0.2rem solid;
+    border-bottom: #000101 0.2rem solid;
+    color: black;
+    font-weight: 700;
+    line-height: 3;
+}
+.button-branco{
+    background:white;
+}
+.button-corrige{
+    background:#c85400;
+}
+.button-confirma{
+    background:#45c745;
+}
+#Pad > button{
+    background: rgb(10 11 12);
+    color: white;
+}
