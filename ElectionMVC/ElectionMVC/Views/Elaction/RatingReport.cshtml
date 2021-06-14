@@ -1,0 +1,52 @@
+﻿@{
+    Layout = "";
+}
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Resultados da votação</title>
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/lib/fontawesome-free-5.15.3-web/css/all.min.css">
+    <link rel="stylesheet" href="/lib/toastr/toastr.min.css">
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/lib/toastr/toastr.min.js"></script>
+    <script src="/lib/toastr/factory.js"></script>
+    <script src="/lib/chart/chart.min.js"></script>
+    <style>
+        #ChartContainer {
+            height: 100% !important;
+            width: auto !important;
+            max-height: 37rem;
+            max-width: 57rem;
+            margin: auto;
+        }
+    </style>
+</head>
+
+
+<body style="user-select: none;">
+    <div class="m-auto" style="max-width: 950px;height: 4rem;">
+        <nav class="navbar navbar-light" style="background-color: #3e1775;border: solid 3px #7918ff;border-top: none;">
+            <span style="font-size: 2rem;color: white;" class="m-auto">Votos</span>
+        </nav>
+        <section style="height: calc(100vh - 4.2rem);min-height: 24rem;background: #e7d5ff;border-left: solid 2px;border-right: solid 2px;">
+            <div class="row mx-2 justify-content-end d-flex">
+                <a href="/Eleicao/Votar" class="btn btn-danger m-2" style="width: fit-content;">Voltar</a>
+            </div>
+            <div class="mx-2 col">
+                <div style="height: calc(100vh - 8rem);min-height: 20rem;width: 100%;">
+                    <div>
+                        <canvas id="ChartContainer"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="/js/RatingReport.js" type="module"></script>
+    <script type="module">
+        import { GenerateChart } from '/js/RatingReport.js'
+        GenerateChart('@ViewBag.ApiUrl');
+    </script>
+</body>
+</html>
